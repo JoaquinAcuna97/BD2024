@@ -30,22 +30,22 @@ establecido en el curso). :heavy_check_mark:
 2. Ingreso de un juego completo de datos de prueba (será más valorada la calidad de los datos que la
 cantidad). :heavy_check_mark:
 3. Utilizando SQL implementar las siguientes consultas:
-a. Mostrar el nombre del gato, el nombre del propietario, la habitación y el monto de la reserva
+- a. Mostrar el nombre del gato, el nombre del propietario, la habitación y el monto de la reserva
 más reciente en la(s) habitación con la capacidad más alta
-b. Mostrar los 3 servicios más solicitados, con su nombre, precio y cantidad total solicitada en
+- b. Mostrar los 3 servicios más solicitados, con su nombre, precio y cantidad total solicitada en
 el año anterior. Solo listar el servicio si cumple que tiene una cantidad total solicitada mayor
 o igual que 5
-c. Listar nombre de gato y nombre de habitación para las reservas que tienen asociados todos
+- c. Listar nombre de gato y nombre de habitación para las reservas que tienen asociados todos
 los servicios adicionales disponibles
-d. Listar monto total de reserva por año y por gato (nombre) para los gatos que tienen más de
+- d. Listar monto total de reserva por año y por gato (nombre) para los gatos que tienen más de
 10 años de edad, son de raza "Persa" y que en el año tuvieron montos total de reserva
 superior a 500 dólares.
-e. Mostrar el ranking de reservas más caras, tomando como monto total de una reserva el monto
+- e. Mostrar el ranking de reservas más caras, tomando como monto total de una reserva el monto
 propio de la reserva más los servicios adicionales contratados en la reserva
-f. Calcular el promedio de duración en días de las reservas realizadas durante el año en curso.
+- f. Calcular el promedio de duración en días de las reservas realizadas durante el año en curso.
 Deben ser consideradas solo aquellas reservas en las que se contrató el servicio
 "CONTROL_PARASITOS" pero no se contrató el servicio "REVISION_VETERINARIA"
-g. Para cada habitación, listar su nombre, la cantidad de días que ha estado ocupada y la
+- g. Para cada habitación, listar su nombre, la cantidad de días que ha estado ocupada y la
 cantidad de días transcurridos desde la fecha de inicio de la primera reserva en el hotel.
 Además, incluir una columna adicional que indique la categoría de rentabilidad, asignando
 el valor "REDITUABLE" si la habitación estuvo ocupada más del 60% de los días, "MAGRO"
