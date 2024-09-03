@@ -97,7 +97,10 @@ INSERT [dbo].[Reserva] ([gatoID], [habitacionNombre], [reservaFechaInicio], [res
     (1, N'Habitación individual', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-03' AS Date), CAST(1000.00 AS Decimal(7, 2))),
     (1, N'Habitación triple', CAST(N'2024-03-04' AS Date), CAST(N'2024-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
     (1, N'Habitación individual', CAST(N'2024-03-04' AS Date), CAST(N'2024-03-05' AS Date), CAST(1000.00 AS Decimal(7, 2))),
-    (2, N'Habitación Doble', CAST(N'2024-03-03' AS Date), CAST(N'2024-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2)))
+    (2, N'Habitación Doble', CAST(N'2024-03-03' AS Date), CAST(N'2024-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(3, N'Habitación Doble', CAST(N'2024-03-03' AS Date), CAST(N'2024-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(4, N'Habitación Cuádruple', CAST(N'2024-03-04' AS Date), CAST(N'2024-03-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+	(5, N'Habitación Cuádruple', CAST(N'2024-03-03' AS Date), CAST(N'2024-03-04' AS Date), CAST(4000.00 AS Decimal(7, 2)))
 GO
 
 
