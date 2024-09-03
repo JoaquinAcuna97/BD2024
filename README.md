@@ -21,3 +21,5 @@ create index IndiceCursoAlumno_Curso on curso_alumno (codigoCurso)
 ```
 create index IndiceCursoAlumno_Alumno curso_alumno (cedulaIdentidad)
 ```
+
+### Carga de datos
