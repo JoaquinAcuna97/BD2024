@@ -31,10 +31,10 @@ establecido en el curso). :heavy_check_mark:
 cantidad). :heavy_check_mark:
 3. Utilizando SQL implementar las siguientes consultas:
 - a. Mostrar el nombre del gato, el nombre del propietario, la habitación y el monto de la reserva
-más reciente en la(s) habitación con la capacidad más alta
+más reciente en la(s) habitación con la capacidad más alta :heavy_check_mark:
 - b. Mostrar los 3 servicios más solicitados, con su nombre, precio y cantidad total solicitada en
 el año anterior. Solo listar el servicio si cumple que tiene una cantidad total solicitada mayor
-o igual que 5
+o igual que 5 :heavy_check_mark:
 - c. Listar nombre de gato y nombre de habitación para las reservas que tienen asociados todos
 los servicios adicionales disponibles
 - d. Listar monto total de reserva por año y por gato (nombre) para los gatos que tienen más de

@@ -94,13 +94,24 @@ INSERT INTO [dbo].[Habitacion]
 GO
 
 INSERT [dbo].[Reserva] ([gatoID], [habitacionNombre], [reservaFechaInicio], [reservaFechaFin], [reservaMonto]) VALUES 
-    (1, N'Habitación individual', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-03' AS Date), CAST(1000.00 AS Decimal(7, 2))),
-    (1, N'Habitación triple', CAST(N'2024-03-04' AS Date), CAST(N'2024-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
-    (1, N'Habitación individual', CAST(N'2024-03-04' AS Date), CAST(N'2024-03-05' AS Date), CAST(1000.00 AS Decimal(7, 2))),
-    (2, N'Habitación Doble', CAST(N'2024-03-03' AS Date), CAST(N'2024-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
-	(3, N'Habitación Doble', CAST(N'2024-03-03' AS Date), CAST(N'2024-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
-	(4, N'Habitación Cuádruple', CAST(N'2024-03-04' AS Date), CAST(N'2024-03-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
-	(5, N'Habitación Cuádruple', CAST(N'2024-03-03' AS Date), CAST(N'2024-03-04' AS Date), CAST(4000.00 AS Decimal(7, 2)))
+    (1, N'Habitación individual', CAST(N'2023-03-03' AS Date), CAST(N'2023-04-03' AS Date), CAST(1000.00 AS Decimal(7, 2))),
+    (1, N'Habitación individual', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(1000.00 AS Decimal(7, 2))),
+    (2, N'Habitación Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(3, N'Habitación Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(2, N'Habitación Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(3, N'Habitación Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(2, N'Habitación Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(3, N'Habitación Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(3, N'Habitación Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(3, N'Habitación Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(1, N'Habitación triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
+	(2, N'Habitación triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
+	(3, N'Habitación triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
+	(4, N'Habitación triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
+	(4, N'Habitación Cuádruple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+	(4, N'Habitación Cuádruple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+	(4, N'Habitación Cuádruple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+	(5, N'Habitación Cuádruple', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(4000.00 AS Decimal(7, 2)))
 GO
 
 
@@ -115,6 +126,22 @@ GO
 
 INSERT [dbo].[Reserva_Servicio] ([reservaID], [servicioNombre], [cantidad]) VALUES 
     (1, N'Baño', 1),
-    (3, N'Baño antipulgas', 1),
-    (4, N'Baño antipulgas', 1)
+	(2, N'Baño', 1),
+	(3, N'Baño', 1),
+	(4, N'Baño', 1),
+    (5, N'Baño antipulgas', 1),
+	(6, N'Baño antipulgas', 1),
+	(7, N'Baño antipulgas', 1),
+	(8, N'Baño antipulgas', 1),
+	(9, N'Baño antipulgas', 1),
+	(10, N'Baño antipulgas', 1),
+	(11, N'Baño antipulgas', 1),
+	(12, N'Baño antipulgas', 1),
+	(13, N'Baño antipulgas', 1),
+    (14, N'Baño antipulgas', 1),
+	(15, N'Esquilado', 1),
+	(16, N'Esquilado', 1),
+	(17, N'Esquilado', 1),
+	(18, N'Castracion', 6)
+
 GO
