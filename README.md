@@ -40,7 +40,7 @@ los servicios adicionales disponibles :heavy_check_mark:
 
 - d. Listar monto total de reserva por año y por gato (nombre) para los gatos que tienen más de
 10 años de edad, son de raza "Persa" y que en el año tuvieron montos total de reserva
-superior a 500 dólares.
+superior a 500 dólares. :heavy_check_mark:
 - e. Mostrar el ranking de reservas más caras, tomando como monto total de una reserva el monto
 propio de la reserva más los servicios adicionales contratados en la reserva
 - f. Calcular el promedio de duración en días de las reservas realizadas durante el año en curso.
