@@ -62,3 +62,27 @@ GROUP BY  RS.reservaID
 HAVING COUNT(DISTINCT(RS.servicioNombre)) = 
 (SELECT COUNT(DISTINCT(S.servicioNombre)) FROM dbo.Servicio as S)
 )
+
+
+/*3.d
+Listar monto total de reserva
+por año y
+por gato (nombre)
+para los gatos 
+que tienen más de
+10 años de edad,
+son de raza "Persa" y
+que en el año tuvieron montos total de reserva
+superior a 500 dólares.
+*/
+
+
+SELECT G.gatoNombre, SUM(R.reservaMonto) FROM dbo.Reserva R
+JOIN dbo.Gato G ON G.gatoID = R.gatoID
+WHERE G.gatoEdad > 10 AND G.gatoRaza ='PERSA'
+GROUP BY G.gatoNombre
+HAVING SUM(R.reservaMonto)>500
+
+SELECT R.gatoID, SUM(R.reservaMonto) FROM dbo.Reserva R
+GROUP BY R.gatoID
+HAVING SUM(R.reservaMonto)>0
