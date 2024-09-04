@@ -125,8 +125,7 @@ INSERT [dbo].[Servicio] ([servicioNombre], [servicioPrecio]) VALUES
 GO
 
 INSERT [dbo].[Reserva_Servicio] ([reservaID], [servicioNombre], [cantidad]) VALUES 
-    (1, N'Baño', 1),
-	(2, N'Baño', 1),
+    (2, N'Baño', 1),
 	(3, N'Baño', 1),
 	(4, N'Baño', 1),
     (5, N'Baño antipulgas', 1),
@@ -142,6 +141,11 @@ INSERT [dbo].[Reserva_Servicio] ([reservaID], [servicioNombre], [cantidad]) VALU
 	(15, N'Esquilado', 1),
 	(16, N'Esquilado', 1),
 	(17, N'Esquilado', 1),
-	(18, N'Castracion', 6)
-
+	(18, N'Castracion', 6),
+    (1, N'Baño', 1),
+    (1, N'Baño antipulgas', 1),
+    (1, N'Castracion', 1),
+    (1, N'Corte de garras', 1),
+    (1, N'Desparasitado interno', 1),
+    (1, N'Esquilado', 1)
 GO

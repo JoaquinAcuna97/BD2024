@@ -36,7 +36,8 @@ más reciente en la(s) habitación con la capacidad más alta :heavy_check_mark:
 el año anterior. Solo listar el servicio si cumple que tiene una cantidad total solicitada mayor
 o igual que 5 :heavy_check_mark:
 - c. Listar nombre de gato y nombre de habitación para las reservas que tienen asociados todos
-los servicios adicionales disponibles
+los servicios adicionales disponibles :heavy_check_mark:
+
 - d. Listar monto total de reserva por año y por gato (nombre) para los gatos que tienen más de
 10 años de edad, son de raza "Persa" y que en el año tuvieron montos total de reserva
 superior a 500 dólares.
