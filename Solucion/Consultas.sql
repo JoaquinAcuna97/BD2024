@@ -101,3 +101,16 @@ FULL JOIN dbo.Reserva_Servicio rs ON r.reservaID = rs.reservaID
 WHERE year(R.reservaFechaFin) = year(GETDATE()) AND rs.servicioNombre = 'Control Parasitos' AND NOT EXISTS(
 SELECT * from Reserva_Servicio rss WHERE rss.servicioNombre = 'Revision Veterinaria' AND rs.reservaID = rss.reservaID
 )
+
+/*3. g. Para cada habitación, listar su nombre, la cantidad de días que ha estado ocupada y la
+  cantidad de días transcurridos desde la fecha de inicio de la primera reserva en el hotel.
+  Además, incluir una columna adicional que indique la categoría de rentabilidad, asignando
+  el valor "REDITUABLE" si la habitación estuvo ocupada más del 60% de los días, "MAGRO"
+  si estuvo ocupada entre el 40% y el 60%, y "NOESNEGOCIO" si estuvo ocupada menos del
+  40%.
+*/
+
+SELECT * FROM dbo.Habitacion
+
+SELECT r.habitacionNombre, SUM(DATEDIFF(DAY, R.reservaFechaInicio, R.reservaFechaFin)) AS DateDiff FROM dbo.Reserva r
+GROUP BY r.habitacionNombre
