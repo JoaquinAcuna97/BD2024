@@ -3,15 +3,13 @@ GO
 /*3.a 
 Mostrar el nombre del gato,
 el nombre del propietario,
-la habitación
+la habitaciï¿½n
 y el monto
 de la reserva
-más reciente
-en la(s) habitación
-con la capacidad más alta
-
+mï¿½s reciente
+en la(s) habitaciï¿½n
+con la capacidad mï¿½s alta
 */
-
 SELECT TOP 1 gato.gatoNombre, pro.propietarioNombre,
 re.habitacionNombre,
 re.reservaMonto
@@ -25,15 +23,14 @@ ON re.habitacionNombre= h.habitacionNombre
 WHERE h.habitacionCapacidad IN (SELECT MAX(habitacionCapacidad) FROM dbo.Habitacion) 
 ORDER BY re.reservaFechaFin DESC
 
+
 /*3.b 
-b. Mostrar los 3 servicios más solicitados,
+b. Mostrar los 3 servicios mï¿½s solicitados,
 con su nombre, precio y cantidad total solicitada en
-el año anterior. 
+el aï¿½o anterior. 
 Solo listar el servicio si cumple que tiene una cantidad total solicitada
 mayor o igual que 5
 */
-
-
 SELECT RS.servicioNombre, S.servicioPrecio, SUM(RS.cantidad) 
 FROM dbo.Reserva_Servicio as RS
 JOIN dbo.Servicio as S 
@@ -47,7 +44,7 @@ HAVING (SUM(RS.cantidad)>5)
 
 /*3.c 
  Listar nombre de gato y
- nombre de habitación 
+ nombre de habitaciï¿½n 
  para las reservas 
  que tienen asociados
  todos los servicios adicionales disponibles
@@ -66,23 +63,38 @@ HAVING COUNT(DISTINCT(RS.servicioNombre)) =
 
 /*3.d
 Listar monto total de reserva
-por año y
+por aï¿½o y
 por gato (nombre)
 para los gatos 
-que tienen más de
-10 años de edad,
+que tienen mï¿½s de
+10 aï¿½os de edad,
 son de raza "Persa" y
-que en el año tuvieron montos total de reserva
-superior a 500 dólares.
+que en el aï¿½o tuvieron montos total de reserva
+superior a 500 dï¿½lares.
 */
-
-
 SELECT G.gatoNombre, SUM(R.reservaMonto) FROM dbo.Reserva R
 JOIN dbo.Gato G ON G.gatoID = R.gatoID
 WHERE G.gatoEdad > 10 AND G.gatoRaza ='PERSA'
 GROUP BY G.gatoNombre
 HAVING SUM(R.reservaMonto)>500
 
-SELECT R.gatoID, SUM(R.reservaMonto) FROM dbo.Reserva R
-GROUP BY R.gatoID
-HAVING SUM(R.reservaMonto)>0
+
+
+/*3.e
+Mostrar el ranking de reservas mÃ¡s caras, tomando como monto total de una reserva el monto
+  propio de la reserva mÃ¡s los servicios adicionales contratados en la reserv
+*/
+SELECT sr.reservaID, SUM((s.servicioPrecio*sr.cantidad)+r.reservaMonto) as Total_Servicio
+FROM dbo.Reserva_Servicio sr
+JOIN dbo.Servicio s ON s.servicioNombre = sr.servicioNombre
+JOIN dbo.Reserva r ON r.reservaID = sr.reservaID 
+GROUP BY sr.reservaID
+ORDER BY Total_Servicio DESC;
+
+
+/*3. f. Calcular el promedio de duraciÃ³n en dÃ­as de las reservas realizadas durante el aÃ±o en curso.
+  Deben ser consideradas solo aquellas reservas en las que se contratÃ³ el servicio
+  "CONTROL_PARASITOS" pero no se contratÃ³ el servicio "REVISION_VETERINARIA"
+*/
+SELECT * FROM Reserva R
+WHERE year(R.reservaFechaFin) = year(GETDATE())
