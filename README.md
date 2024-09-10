@@ -51,7 +51,7 @@ create index IndiceCursoAlumno_Alumno curso_alumno (cedulaIdentidad)
 
 - f. Calcular el promedio de duración en días de las reservas realizadas durante el año en curso.
   Deben ser consideradas solo aquellas reservas en las que se contrató el servicio
-  "CONTROL_PARASITOS" pero no se contrató el servicio "REVISION_VETERINARIA"
+  "CONTROL_PARASITOS" pero no se contrató el servicio "REVISION_VETERINARIA" :heavy_check_mark:
 
 - g. Para cada habitación, listar su nombre, la cantidad de días que ha estado ocupada y la
   cantidad de días transcurridos desde la fecha de inicio de la primera reserva en el hotel.

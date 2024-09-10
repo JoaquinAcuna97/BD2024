@@ -96,5 +96,8 @@ ORDER BY Total_Servicio DESC;
   Deben ser consideradas solo aquellas reservas en las que se contrató el servicio
   "CONTROL_PARASITOS" pero no se contrató el servicio "REVISION_VETERINARIA"
 */
-SELECT * FROM Reserva R
-WHERE year(R.reservaFechaFin) = year(GETDATE())
+SELECT AVG(DATEDIFF(DAY, R.reservaFechaInicio, R.reservaFechaFin)) AS DateDiff FROM dbo.Reserva r
+FULL JOIN dbo.Reserva_Servicio rs ON r.reservaID = rs.reservaID
+WHERE year(R.reservaFechaFin) = year(GETDATE()) AND rs.servicioNombre = 'Control Parasitos' AND NOT EXISTS(
+SELECT * from Reserva_Servicio rss WHERE rss.servicioNombre = 'Revision Veterinaria' AND rs.reservaID = rss.reservaID
+)

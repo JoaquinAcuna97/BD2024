@@ -69,69 +69,80 @@ INSERT INTO [dbo].[Habitacion]
            ,[habitacionPrecio]
            ,[habitacionEstado])
      VALUES
-        ('Habitaci�n individual', 1, 1000, 'DISPONIBLE'),
-        ('Habitaci�n Doble', 2, 2000, 'DISPONIBLE'),
-        ('Habitaci�n triple', 3, 3000, 'DISPONIBLE'),
-        ('Habitaci�n Cu�druple', 4, 4000, 'DISPONIBLE')
+        ('Habitacion individual', 1, 1000, 'DISPONIBLE'),
+        ('Habitacion Doble', 2, 2000, 'DISPONIBLE'),
+        ('Habitacion triple', 3, 3000, 'DISPONIBLE'),
+        ('Habitacion Cuadruple', 4, 4000, 'DISPONIBLE')
 GO
 
 INSERT [dbo].[Reserva] ([gatoID], [habitacionNombre], [reservaFechaInicio], [reservaFechaFin], [reservaMonto]) VALUES 
-    (1, N'Habitaci�n individual', CAST(N'2023-03-03' AS Date), CAST(N'2023-04-03' AS Date), CAST(1000.00 AS Decimal(7, 2))),
-    (1, N'Habitaci�n individual', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(1000.00 AS Decimal(7, 2))),
-    (2, N'Habitaci�n Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
-	(3, N'Habitaci�n Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
-	(2, N'Habitaci�n Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
-	(3, N'Habitaci�n Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
-	(2, N'Habitaci�n Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
-	(3, N'Habitaci�n Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
-	(3, N'Habitaci�n Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
-	(3, N'Habitaci�n Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
-	(1, N'Habitaci�n triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
-	(2, N'Habitaci�n triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
-	(3, N'Habitaci�n triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
-	(4, N'Habitaci�n triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
-	(4, N'Habitaci�n Cu�druple', CAST(N'2024-03-04' AS Date), CAST(N'2024-04-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
-	(4, N'Habitaci�n Cu�druple', CAST(N'2024-03-04' AS Date), CAST(N'2024-05-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
-	(4, N'Habitaci�n Cu�druple', CAST(N'2024-03-04' AS Date), CAST(N'2024-06-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
-	(5, N'Habitaci�n Cu�druple', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-04' AS Date), CAST(4000.00 AS Decimal(7, 2))),
-    (6, N'Habitaci�n Cu�druple', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-04' AS Date), CAST(4000.00 AS Decimal(7, 2)))
-    (7, N'Habitaci�n Cu�druple', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-04' AS Date), CAST(4000.00 AS Decimal(7, 2)))
-    (8, N'Habitaci�n Cu�druple', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-04' AS Date), CAST(4000.00 AS Decimal(7, 2)))
-    (9, N'Habitaci�n Cu�druple', CAST(N'2024-03-03' AS Date), CAST(N'2024-05-04' AS Date), CAST(4000.00 AS Decimal(7, 2)))
+    (1, N'Habitacion individual', CAST(N'2023-03-03' AS Date), CAST(N'2023-04-03' AS Date), CAST(1000.00 AS Decimal(7, 2))),
+    (1, N'Habitacion individual', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(1000.00 AS Decimal(7, 2))),
+    (2, N'Habitacion Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(3, N'Habitacion Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(2, N'Habitacion Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(3, N'Habitacion Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(2, N'Habitacion Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(3, N'Habitacion Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(3, N'Habitacion Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(3, N'Habitacion Doble', CAST(N'2023-03-03' AS Date), CAST(N'2023-03-04' AS Date), CAST(2000.00 AS Decimal(7, 2))),
+	(1, N'Habitacion triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
+	(2, N'Habitacion triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
+	(3, N'Habitacion triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
+	(4, N'Habitacion triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
+	(4, N'Habitacion Cuadruple', CAST(N'2024-03-04' AS Date), CAST(N'2024-04-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+	(4, N'Habitacion Cuadruple', CAST(N'2024-03-04' AS Date), CAST(N'2024-05-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+	(4, N'Habitacion Cuadruple', CAST(N'2024-03-04' AS Date), CAST(N'2024-06-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+	(5, N'Habitacion Cuadruple', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-04' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+    (6, N'Habitacion Cuadruple', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-04' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+    (7, N'Habitacion Cuadruple', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-04' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+    (8, N'Habitacion Cuadruple', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-04' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+    (9, N'Habitacion Cuadruple', CAST(N'2024-03-03' AS Date), CAST(N'2024-05-04' AS Date), CAST(4000.00 AS Decimal(7, 2)))
 GO
 
 
 INSERT [dbo].[Servicio] ([servicioNombre], [servicioPrecio]) VALUES 
-    (N'Ba�o', CAST(500.00 AS Decimal(7, 2))),
-    (N'Ba�o antipulgas', CAST(700.00 AS Decimal(7, 2))),
+    (N'Bano', CAST(500.00 AS Decimal(7, 2))),
+    (N'Bano antipulgas', CAST(700.00 AS Decimal(7, 2))),
     (N'Castracion', CAST(2000.00 AS Decimal(7, 2))),
     (N'Corte de garras', CAST(400.00 AS Decimal(7, 2))),
     (N'Desparasitado interno', CAST(700.00 AS Decimal(7, 2))),
-    (N'Esquilado', CAST(600.00 AS Decimal(7, 2)))
+    (N'Esquilado', CAST(600.00 AS Decimal(7, 2))),
+	(N'Control Parasitos', CAST(200.00 AS Decimal(7, 2))),
+	(N'Revision Veterinaria', CAST(100.00 AS Decimal(7, 2)))
 GO
 
 INSERT [dbo].[Reserva_Servicio] ([reservaID], [servicioNombre], [cantidad]) VALUES 
-    (2, N'Ba�o', 1),
-	(3, N'Ba�o', 1),
-	(4, N'Ba�o', 1),
-    (5, N'Ba�o antipulgas', 1),
-	(6, N'Ba�o antipulgas', 1),
-	(7, N'Ba�o antipulgas', 1),
-	(8, N'Ba�o antipulgas', 1),
-	(9, N'Ba�o antipulgas', 1),
-	(10, N'Ba�o antipulgas', 1),
-	(11, N'Ba�o antipulgas', 1),
-	(12, N'Ba�o antipulgas', 1),
-	(13, N'Ba�o antipulgas', 1),
-    (14, N'Ba�o antipulgas', 1),
+    (2, N'Bano', 1),
+	(3, N'Bano', 1),
+	(4, N'Bano', 1),
+    (5, N'Bano antipulgas', 1),
+	(6, N'Bano antipulgas', 1),
+	(7, N'Bano antipulgas', 1),
+	(8, N'Bano antipulgas', 1),
+	(9, N'Bano antipulgas', 1),
+	(10, N'Bano antipulgas', 1),
+	(11, N'Bano antipulgas', 1),
+	(12, N'Bano antipulgas', 1),
+	(13, N'Bano antipulgas', 1),
+    (14, N'Bano antipulgas', 1),
 	(15, N'Esquilado', 1),
 	(16, N'Esquilado', 1),
 	(17, N'Esquilado', 1),
 	(18, N'Castracion', 6),
-    (1, N'Ba�o', 1),
-    (1, N'Ba�o antipulgas', 1),
+    (1, N'Bano', 1),
+    (1, N'Bano antipulgas', 1),
     (1, N'Castracion', 1),
     (1, N'Corte de garras', 1),
     (1, N'Desparasitado interno', 1),
-    (1, N'Esquilado', 1)
+    (1, N'Esquilado', 1),
+	(15, N'Control Parasitos', 1),
+	(16, N'Control Parasitos', 1),
+	(17, N'Control Parasitos', 1),
+	(18, N'Control Parasitos', 1),
+	(19, N'Control Parasitos', 1),
+	(20, N'Control Parasitos', 1),
+	(21, N'Control Parasitos', 1),
+	(22, N'Control Parasitos', 1),
+    (22, N'Revision Veterinaria', 1)
 GO
