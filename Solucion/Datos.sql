@@ -90,14 +90,14 @@ INSERT [dbo].[Reserva] ([gatoID], [habitacionNombre], [reservaFechaInicio], [res
 	(2, N'Habitacion triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
 	(3, N'Habitacion triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
 	(4, N'Habitacion triple', CAST(N'2023-03-04' AS Date), CAST(N'2023-03-05' AS Date), CAST(3000.00 AS Decimal(7, 2))),
-	(4, N'Habitacion Cuadruple', CAST(N'2024-03-04' AS Date), CAST(N'2024-04-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
-	(4, N'Habitacion Cuadruple', CAST(N'2024-03-04' AS Date), CAST(N'2024-05-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
-	(4, N'Habitacion Cuadruple', CAST(N'2024-03-04' AS Date), CAST(N'2024-06-07' AS Date), CAST(4000.00 AS Decimal(7, 2))),
-	(5, N'Habitacion Cuadruple', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-04' AS Date), CAST(4000.00 AS Decimal(7, 2))),
-    (6, N'Habitacion Cuadruple', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-04' AS Date), CAST(4000.00 AS Decimal(7, 2))),
-    (7, N'Habitacion Cuadruple', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-04' AS Date), CAST(4000.00 AS Decimal(7, 2))),
-    (8, N'Habitacion Cuadruple', CAST(N'2024-03-03' AS Date), CAST(N'2024-04-04' AS Date), CAST(4000.00 AS Decimal(7, 2))),
-    (9, N'Habitacion Cuadruple', CAST(N'2024-03-03' AS Date), CAST(N'2024-05-04' AS Date), CAST(4000.00 AS Decimal(7, 2)))
+	(4, N'Habitacion Cuadruple', CAST(N'2024-03-04' AS Date), CAST(N'2024-04-03' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+	(4, N'Habitacion Cuadruple', CAST(N'2024-05-05' AS Date), CAST(N'2024-06-06' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+	(4, N'Habitacion Cuadruple', CAST(N'2024-07-06' AS Date), CAST(N'2024-07-27' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+	(5, N'Habitacion Cuadruple', CAST(N'2024-08-01' AS Date), CAST(N'2024-08-15' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+    (6, N'Habitacion Cuadruple', CAST(N'2024-08-16' AS Date), CAST(N'2024-08-29' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+    (7, N'Habitacion Cuadruple', CAST(N'2024-09-03' AS Date), CAST(N'2024-09-10' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+    (8, N'Habitacion Cuadruple', CAST(N'2024-09-11' AS Date), CAST(N'2024-09-25' AS Date), CAST(4000.00 AS Decimal(7, 2))),
+    (9, N'Habitacion Cuadruple', CAST(N'2024-10-03' AS Date), CAST(N'2024-10-04' AS Date), CAST(4000.00 AS Decimal(7, 2)))
 GO
 
 

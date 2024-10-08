@@ -110,7 +110,23 @@ SELECT * from Reserva_Servicio rss WHERE rss.servicioNombre = 'Revision Veterina
   40%.
 */
 
-SELECT * FROM dbo.Habitacion
+SELECT 
+    r.habitacionNombre,
+    r.DiasOcupada,
+    r.DiasPrimeraReserva,
+    CASE
+        WHEN r.DiasOcupada*100/r.DiasPrimeraReserva > 60 THEN 'REDITUABLE'
+        WHEN r.DiasOcupada*100/r.DiasPrimeraReserva BETWEEN 40 AND 60 THEN 'MAGRO'
+        WHEN r.DiasOcupada*100/r.DiasPrimeraReserva < 40 THEN 'NOESNEGOCIO'
+    END AS Clasificacion
+FROM (
+    SELECT 
+        habitacionNombre,
+        SUM(DATEDIFF(DAY, R.reservaFechaInicio, R.reservaFechaFin)) AS DiasOcupada, 
+        DATEDIFF(DAY, MIN(R.reservaFechaInicio), GETDATE()) AS DiasPrimeraReserva
+    FROM dbo.Reserva r
+    GROUP BY r.habitacionNombre
+) r;
 
-SELECT r.habitacionNombre, SUM(DATEDIFF(DAY, R.reservaFechaInicio, R.reservaFechaFin)) AS DateDiff FROM dbo.Reserva r
-GROUP BY r.habitacionNombre
+
+SELECT * FROM Reserva
