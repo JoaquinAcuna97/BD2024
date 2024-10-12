@@ -58,4 +58,4 @@ create index IndiceCursoAlumno_Alumno curso_alumno (cedulaIdentidad)
   Además, incluir una columna adicional que indique la categoría de rentabilidad, asignando
   el valor "REDITUABLE" si la habitación estuvo ocupada más del 60% de los días, "MAGRO"
   si estuvo ocupada entre el 40% y el 60%, y "NOESNEGOCIO" si estuvo ocupada menos del
-  40%.
+  40%. :heavy_check_mark:
