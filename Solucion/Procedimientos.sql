@@ -6,7 +6,7 @@ No permitir realizar la reserva si el estado de la habitación es LLENA o LIMPIAN
 Se debe retornar el número de reserva asignado (cero sino se logró reservar) 
 */
 
-CREATE PROCEDURE ReservarHabitacion1
+CREATE PROCEDURE ReservarHabitacion3
     @GatoID INT,
     @HabitacionNombre VARCHAR(50),
     @Inicio DATE,
@@ -23,16 +23,28 @@ BEGIN
     IF @Estado NOT IN ('LIMPIANDO', 'LLENA')
     BEGIN
         PRINT 'Habitacion Libre, reservando';
-		UPDATE hab.habitacionEstado VALUE 'LLENA' FROM Habitacion hab.habitacionNombre = @HabitacionNombre;
+        
+        -- Corrected UPDATE statement
+        UPDATE Habitacion 
+        SET habitacionEstado = 'LLENA' 
+        WHERE habitacionNombre = @HabitacionNombre;
+
+        -- Corrected INSERT statement
+        INSERT INTO Reserva (gatoID, habitacionNombre, reservaFechaInicio, reservaFechaFin, reservaMonto) 
+        VALUES (@GatoID, @HabitacionNombre, @Inicio, @Fin, @Monto);
+        
+        RETURN 1;  -- Optional: Indicate success
     END
-	ELSE 
-	BEGIN 
-		return 0;
-	END
+    ELSE 
+    BEGIN 
+		PRINT 'Habitacion Ocupada, no se puede reservar';
+        RETURN 0;  -- Indicates the room was not available
+    END
 END;
 
 
-EXEC ReservarHabitacion1
+
+EXEC ReservarHabitacion3
     @GatoID = 1, 
     @HabitacionNombre = 'Habitacion Cuadruple', 
     @Inicio = '2024-10-12', 
